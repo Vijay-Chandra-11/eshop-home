@@ -1,0 +1,40 @@
+
+/* Glassmorphism effect for hero card */
+.glassmorphism {
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(200, 220, 255, 0.2);
+}
+
+/* Custom button shadow and transition */
+.btn-sky {
+    box-shadow: 0 2px 8px 0 rgba(56, 189, 248, 0.15);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn-sky:hover {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px 0 rgba(56, 189, 248, 0.25);
+}
+
+/* Scroll-to-top button show/hide */
+#scrollTopBtn {
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+#scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hide number input arrows for newsletter */
+input[type="email"]::-webkit-outer-spin-button,
+input[type="email"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="email"] {
+    outline: none;
+}

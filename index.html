@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eshop - Your Online Store</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Google Fonts: Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+</body>
+<body class="bg-sky-50 font-['Roboto']">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur shadow flex items-center justify-between px-6 py-3">
+        <div class="flex items-center gap-2">
+            <img src="icons/favicon.ico" alt="eShop Logo" class="w-8 h-8">
+            <span class="text-2xl font-bold text-sky-600">eShop</span>
+        </div>
+        <ul class="flex gap-6 text-sky-700 font-medium">
+            <li><a href="#" class="hover:text-sky-500">Home</a></li>
+            <li><a href="#products" class="hover:text-sky-500">Products</a></li>
+            <li><a href="#features" class="hover:text-sky-500">Features</a></li>
+            <li><a href="#contact" class="hover:text-sky-500">Contact</a></li>
+        </ul>
+        <div class="relative">
+            <a href="#cart" class="text-sky-600 text-2xl"><i class="fas fa-shopping-cart"></i></a>
+            <span class="absolute -top-2 -right-2 bg-sky-500 text-white text-xs rounded-full px-1.5">3</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="flex flex-col md:flex-row items-center justify-between px-8 py-16 bg-gradient-to-br from-sky-100 to-white">
+        <div class="max-w-xl">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-sky-700 mb-4 bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent">Welcome to eShop</h1>
+            <p class="text-lg text-gray-600 mb-6">Your one-stop online store for the latest trends and unbeatable prices. Shop quality products with fast delivery and easy returns.</p>
+            <div class="flex gap-4">
+                <a href="#products" class="px-6 py-2 bg-sky-500 text-white rounded shadow hover:bg-sky-600 transition">Shop Now</a>
+                <a href="#features" class="px-6 py-2 bg-white border border-sky-500 text-sky-600 rounded shadow hover:bg-sky-50 transition">Learn More</a>
+            </div>
+        </div>
+        <div class="mt-10 md:mt-0 md:ml-10 flex-shrink-0">
+            <div class="w-72 h-72 bg-white/60 rounded-3xl shadow-lg flex items-center justify-center glassmorphism">
+                <img src="icons/favicon.ico" alt="Featured" class="w-40 h-40">
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="relative max-w-4xl mx-auto my-12">
+        <div id="carousel" class="overflow-hidden rounded-xl shadow-lg">
+            <div class="flex transition-transform duration-700" id="carousel-inner">
+                <picture>
+                  <source srcset="images/carousel1.jpg">
+                  <source srcset="images/carousel1.jpeg">
+                  <source srcset="images/carousel1.png">
+                  <img src="images/carousel1.jpg" class="w-full h-64 object-cover" alt="Slide 1">
+                </picture>
+                <picture>
+                  <source srcset="images/carousel2.jpg">
+                  <source srcset="images/carousel2.jpeg">
+                  <source srcset="images/carousel2.png">
+                  <img src="images/carousel2.jpg" class="w-full h-64 object-cover" alt="Slide 2">
+                </picture>
+                <picture>
+                  <source srcset="images/carousel3.jpg">
+                  <source srcset="images/carousel3.jpeg">
+                  <source srcset="images/carousel3.png">
+                  <img src="images/carousel3.jpg" class="w-full h-64 object-cover" alt="Slide 3">
+                </picture>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 bottom-4 flex justify-center gap-2">
+            <button class="w-3 h-3 rounded-full bg-sky-400 opacity-80" onclick="prevSlide()"></button>
+            <button class="w-3 h-3 rounded-full bg-sky-200 opacity-80" onclick="nextSlide()"></button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="max-w-6xl mx-auto py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="flex flex-col items-center bg-white rounded-xl shadow p-6">
+            <div class="bg-sky-100 p-4 rounded-full mb-3"><i class="fas fa-gem text-sky-500 text-2xl"></i></div>
+            <h3 class="font-bold text-lg mb-1">Quality Products</h3>
+            <p class="text-gray-500 text-center">Handpicked items from top brands for you.</p>
+        </div>
+        <div class="flex flex-col items-center bg-white rounded-xl shadow p-6">
+            <div class="bg-sky-100 p-4 rounded-full mb-3"><i class="fas fa-truck-fast text-sky-500 text-2xl"></i></div>
+            <h3 class="font-bold text-lg mb-1">Fast Delivery</h3>
+            <p class="text-gray-500 text-center">Get your orders delivered quickly and safely.</p>
+        </div>
+        <div class="flex flex-col items-center bg-white rounded-xl shadow p-6">
+            <div class="bg-sky-100 p-4 rounded-full mb-3"><i class="fas fa-rotate-left text-sky-500 text-2xl"></i></div>
+            <h3 class="font-bold text-lg mb-1">Easy Returns</h3>
+            <p class="text-gray-500 text-center">Hassle-free returns within 7 days.</p>
+        </div>
+        <div class="flex flex-col items-center bg-white rounded-xl shadow p-6">
+            <div class="bg-sky-100 p-4 rounded-full mb-3"><i class="fas fa-tags text-sky-500 text-2xl"></i></div>
+            <h3 class="font-bold text-lg mb-1">Best Prices</h3>
+            <p class="text-gray-500 text-center">Unbeatable deals and exclusive offers.</p>
+        </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section id="products" class="max-w-6xl mx-auto py-12">
+        <h2 class="text-2xl font-bold text-sky-700 mb-8">Trending Products</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Example Product Card -->
+            <div class="bg-white rounded-xl shadow p-4 flex flex-col items-center hover:scale-105 transition">
+                <picture>
+                  <source srcset="images/product1.jpg">
+                  <source srcset="images/product1.jpeg">
+                  <source srcset="images/product1.png">
+                  <img src="images/product1.jpg" alt="Product" class="w-32 h-32 object-cover mb-3 rounded-lg">
+                </picture>
+                <h3 class="font-semibold text-lg mb-1">Classic T-Shirt</h3>
+                <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                </div>
+                <span class="text-sky-600 font-bold text-xl mb-2">₹499</span>
+                <button class="bg-sky-500 text-white px-4 py-1 rounded hover:bg-sky-600 transition"><i class="fas fa-cart-plus mr-1"></i>Add to Cart</button>
+            </div>
+            <div class="bg-white rounded-xl shadow p-4 flex flex-col items-center hover:scale-105 transition">
+                <picture>
+                  <source srcset="images/product2.jpg">
+                  <source srcset="images/product2.jpeg">
+                  <source srcset="images/product2.png">
+                  <img src="images/product2.jpg" alt="Product" class="w-32 h-32 object-cover mb-3 rounded-lg">
+                </picture>
+                <h3 class="font-semibold text-lg mb-1">Wireless Headphones</h3>
+                <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                </div>
+                <span class="text-sky-600 font-bold text-xl mb-2">₹1,299</span>
+                <button class="bg-sky-500 text-white px-4 py-1 rounded hover:bg-sky-600 transition"><i class="fas fa-cart-plus mr-1"></i>Add to Cart</button>
+            </div>
+            <div class="bg-white rounded-xl shadow p-4 flex flex-col items-center hover:scale-105 transition">
+                <picture>
+                  <source srcset="images/product3.jpg">
+                  <source srcset="images/product3.jpeg">
+                  <source srcset="images/product3.png">
+                  <img src="images/product3.jpg" alt="Product" class="w-32 h-32 object-cover mb-3 rounded-lg">
+                </picture>
+                <h3 class="font-semibold text-lg mb-1">Running Shoes</h3>
+                <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <span class="text-sky-600 font-bold text-xl mb-2">₹2,499</span>
+                <button class="bg-sky-500 text-white px-4 py-1 rounded hover:bg-sky-600 transition"><i class="fas fa-cart-plus mr-1"></i>Add to Cart</button>
+            </div>
+            <div class="bg-white rounded-xl shadow p-4 flex flex-col items-center hover:scale-105 transition">
+                <picture>
+                  <source srcset="images/product4.jpg">
+                  <source srcset="images/product4.jpeg">
+                  <source srcset="images/product4.png">
+                  <img src="images/product4.jpg" alt="Product" class="w-32 h-32 object-cover mb-3 rounded-lg">
+                </picture>
+                <h3 class="font-semibold text-lg mb-1">Smart Watch</h3>
+                <div class="flex items-center gap-1 mb-2 text-yellow-400">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                </div>
+                <span class="text-sky-600 font-bold text-xl mb-2">₹1,999</span>
+                <button class="bg-sky-500 text-white px-4 py-1 rounded hover:bg-sky-600 transition"><i class="fas fa-cart-plus mr-1"></i>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Catalog Table -->
+    <section class="max-w-6xl mx-auto py-12">
+        <h2 class="text-2xl font-bold text-sky-700 mb-6">Product Catalog</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white rounded-xl shadow">
+                <thead class="bg-sky-200 text-sky-700">
+                    <tr>
+                        <th class="py-3 px-4 text-left">Product</th>
+                        <th class="py-3 px-4 text-left">Category</th>
+                        <th class="py-3 px-4 text-left">Price</th>
+                        <th class="py-3 px-4 text-left">Stock</th>
+                        <th class="py-3 px-4 text-left">Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="hover:bg-sky-50">
+                        <td class="py-2 px-4">Classic T-Shirt</td>
+                        <td class="py-2 px-4">Clothing</td>
+                        <td class="py-2 px-4">₹499</td>
+                        <td class="py-2 px-4">In Stock</td>
+                        <td class="py-2 px-4">4.0</td>
+                    </tr>
+                    <tr class="hover:bg-sky-50">
+                        <td class="py-2 px-4">Wireless Headphones</td>
+                        <td class="py-2 px-4">Electronics</td>
+                        <td class="py-2 px-4">₹1,299</td>
+                        <td class="py-2 px-4">In Stock</td>
+                        <td class="py-2 px-4">4.5</td>
+                    </tr>
+                    <tr class="hover:bg-sky-50">
+                        <td class="py-2 px-4">Running Shoes</td>
+                        <td class="py-2 px-4">Footwear</td>
+                        <td class="py-2 px-4">₹2,499</td>
+                        <td class="py-2 px-4">Limited</td>
+                        <td class="py-2 px-4">5.0</td>
+                    </tr>
+                    <tr class="hover:bg-sky-50">
+                        <td class="py-2 px-4">Smart Watch</td>
+                        <td class="py-2 px-4">Electronics</td>
+                        <td class="py-2 px-4">₹1,999</td>
+                        <td class="py-2 px-4">Out of Stock</td>
+                        <td class="py-2 px-4">3.0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <div class="flex justify-center gap-2 mb-12">
+        <button class="px-3 py-1 rounded bg-sky-100 text-sky-600 hover:bg-sky-200">&lt;</button>
+        <button class="px-3 py-1 rounded bg-sky-500 text-white">1</button>
+        <button class="px-3 py-1 rounded bg-sky-100 text-sky-600 hover:bg-sky-200">2</button>
+        <button class="px-3 py-1 rounded bg-sky-100 text-sky-600 hover:bg-sky-200">3</button>
+        <button class="px-3 py-1 rounded bg-sky-100 text-sky-600 hover:bg-sky-200">&gt;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gradient-to-r from-sky-400 to-blue-500 text-white py-10 mt-12">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+            <div>
+                <div class="flex items-center gap-2 mb-2">
+                    <img src="icons/favicon.ico" alt="eShop Logo" class="w-8 h-8">
+                    <span class="text-xl font-bold">eShop</span>
+                </div>
+                <p class="text-sm">Your trusted online store for quality and value.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">Company</h4>
+                <ul class="text-sm space-y-1">
+                    <li><a href="#" class="hover:underline">About Us</a></li>
+                    <li><a href="#" class="hover:underline">Careers</a></li>
+                    <li><a href="#" class="hover:underline">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">Support</h4>
+                <ul class="text-sm space-y-1">
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                    <li><a href="#" class="hover:underline">FAQs</a></li>
+                    <li><a href="#" class="hover:underline">Returns</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">Newsletter</h4>
+                <form class="flex flex-col gap-2">
+                    <input type="email" placeholder="Your email" class="px-3 py-2 rounded text-sky-700" required>
+                    <button type="submit" class="bg-white text-sky-600 px-3 py-2 rounded hover:bg-sky-100">Subscribe</button>
+                </form>
+                <div class="flex gap-3 mt-3">
+                    <a href="#" class="text-white text-xl hover:text-sky-200"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white text-xl hover:text-sky-200"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white text-xl hover:text-sky-200"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-xs mt-8">&copy; 2025 eShop. All rights reserved.</div>
+    </footer>
+
+    <!-- Floating Scroll-to-Top Button -->
+    <button id="scrollTopBtn" onclick="scrollToTop()" class="fixed bottom-6 right-6 bg-gradient-to-br from-sky-400 to-blue-500 text-white p-3 rounded-full shadow-lg hover:scale-110 transition hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="js/index.js"></script>
+</body>
+</body>
+</html>
